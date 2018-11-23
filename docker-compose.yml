@@ -12,4 +12,11 @@ services:
       - "8001:8001"
     depends_on:
       - db 
-  
+  nginx:
+    image: nginx:1.13
+    ports:
+      - 8000:80
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+    depends_on: 
+      - django
