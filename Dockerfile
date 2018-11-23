@@ -31,7 +31,7 @@ RUN django-admin.py startproject djangoProject .
 RUN django-admin.py startapp djangoApp
 RUN python manage.py migrate 
 
-EXPOSE 8080
+EXPOSE 8001
 
-CMD ["python", "manage.py", "runserver", "8080"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
 
